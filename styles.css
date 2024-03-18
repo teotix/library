@@ -37,14 +37,12 @@
     gap: 2rem;
     padding: 0 1rem;
     border-radius: 2rem;
-    div {
-    }
 }
 
 .books-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(8, auto);
 }
 
 .book-card {
