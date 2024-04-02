@@ -1,5 +1,4 @@
 const myLibrary = [];
-
 const submitButton = document.querySelector(".top button");
 const bookTitle = document.querySelector("#book-title");
 const bookAuthor = document.querySelector("#book-author");
@@ -17,17 +16,19 @@ booksContainer.addEventListener("click", (e) => {
 
 submitButton.addEventListener("click", addBookToLibrary);
 
-function Book(id, title, author, numPages, read) {
-  this.id = id;
-  this.title = title;
-  this.author = author;
-  this.numPages = numPages;
-  this.read = read;
-  this.info = function () {
+class Book {
+  constructor(id, title, author, numPages, read) {
+    this.id = id;
+    this.title = title;
+    this.author = author;
+    this.numPages = numPages;
+    this.read = read;
+  }
+  info() {
     return `${this.title} by ${this.author}, ${numPages} pages, ${
       read ? "read" : "not read yet"
     }`;
-  };
+  }
 }
 
 function removeAllChildNodes(parent) {
